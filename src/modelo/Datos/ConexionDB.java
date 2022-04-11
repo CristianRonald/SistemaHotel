@@ -11,7 +11,7 @@ public class ConexionDB {
 	
 	private static String servidor = "jdbc:mysql://localhost:3306/BD_HOTEL";
 	private static String username = "root";
-	private static String password = "cris2021";
+	private static String password = "";
 	private static String driver="com.mysql.jdbc.Driver";
 	private static  Connection conexionDB;
 	
