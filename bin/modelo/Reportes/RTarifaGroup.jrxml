@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-07-11T21:43:22 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RTarifaGroup" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="270a6510-3414-4656-9342-36f6b9e7f696">
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="PrtSubTitle" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select*
+from Tarifas  as T, Habitacion as H ,empresa
+where  T.NumeroHab=H.NumeroHab
+
+order by H.NumeroHab,T.TipoTar ASC]]>
+	</queryString>
+	<field name="Id_Tar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumeroHab" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TipoTar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrecioTar" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Precio2Tar" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaActualizarTar" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN_7" class="java.lang.Integer"/>
+	<field name="Tipo_Hab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PisoHab" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaAltaHab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DescripcionHab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ImageHab" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="URLHab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EstadoHab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OrdenarHab" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CaracteristicasHab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ruc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RazonSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Web" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Propietario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GiroNegocio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaCreo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Categoria" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Estado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Logo" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Url" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{NumeroHab}]]></groupExpression>
+		<groupHeader>
+			<band height="36">
+				<rectangle>
+					<reportElement mode="Transparent" x="0" y="0" width="551" height="15" forecolor="#0A0A09" backcolor="#5B5780" uuid="7ea95450-ee62-474c-9492-b579701ec7b3"/>
+					<graphicElement>
+						<pen lineStyle="Dotted" lineColor="#7C7887"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement style="SubTitle" x="2" y="2" width="478" height="13" forecolor="#0F0F0E" uuid="0af2eb97-cf9e-4640-a988-bc290a275a38"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NumeroHab}+" "+$F{Tipo_Hab}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="370" y="20" width="50" height="13" uuid="e59b07e7-e2c1-47a7-807a-169f4095a175"/>
+					<textElement>
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Precio 1]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="440" y="21" width="50" height="13" uuid="91fbbbd2-5835-4b29-b6d6-84e596493d59"/>
+					<textElement>
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Precio 2]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="490" y="21" width="61" height="13" uuid="d5de16fa-be2e-497d-9c6e-57fe946d6a2e"/>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Fec.Actualizo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="40" y="20" width="90" height="13" uuid="124e75c3-8dd7-482b-b080-7e89b80e3e99"/>
+					<textElement>
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Tipo de Tarifa]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="20" width="27" height="13" uuid="90f4c2c5-9e67-40ec-b561-ed6c1a47bbc1"/>
+					<textElement>
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[ID]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="34" width="551" height="1" uuid="616957a3-b995-4e93-bfcc-aa5be465b9bc"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="9">
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="551" height="1" uuid="ad7ee774-87a8-4a20-aa9f-1082c9aabf87"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement key="" positionType="Float" x="1" y="0" width="551" height="15" isPrintWhenDetailOverflows="true" uuid="23d457ed-ca5b-4e2e-9250-09194f453986"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RazonSocial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="10" width="552" height="15" uuid="d05a2d8a-23ba-4243-86c9-31f15fe54202"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RUC "+$F{Ruc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="20" width="551" height="15" uuid="9ad27933-aefe-434d-9745-0e68d9c8b195"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="40" width="552" height="12" uuid="acdef9a4-2465-48cb-877a-a8b8cd3d13d5"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PrtSubTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="39" height="15" uuid="a2e7e9b1-f280-429b-9f10-dade0526a887"/>
+				<textElement>
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Id_Tar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="39" y="0" width="311" height="15" uuid="98f999da-29b2-4098-bd95-6188bb969bd7"/>
+				<textElement>
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TipoTar}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement style="Detail" x="370" y="0" width="70" height="15" uuid="36179c73-23a3-4560-bddb-7c2f2d345600"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PrecioTar}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement style="Detail" x="460" y="0" width="40" height="15" uuid="df7b0a80-be7d-42a9-9a70-85d212e3b9a8"/>
+				<textElement textAlignment="Right" markup="none">
+					<font fontName="SansSerif" size="9"/>
+					<paragraph lineSpacing="Single" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Precio2Tar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="500" y="0" width="53" height="15" uuid="49349465-8659-48a3-a788-eea5c1e1fdf9"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{FechaActualizarTar})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="1" width="551" height="1" uuid="2ce160c8-97e0-45a2-a52c-9965e7e575c5"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField evaluationTime="Report">
+				<reportElement x="290" y="2" width="40" height="13" forecolor="#242323" uuid="a5fec00c-b41c-495c-96a9-5aba37ca528f"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" de  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="2" width="99" height="13" forecolor="#242323" uuid="1336f99f-0da7-4184-80b7-dc7bf1af601d"/>
+				<textFieldExpression><![CDATA["Items: "+$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="2" width="40" height="13" forecolor="#242323" uuid="714b5efa-3747-4ced-bad8-8a00e5c9896e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE&apos;,&apos; dd &apos;de&apos; MMMMM yyyy">
+				<reportElement x="380" y="2" width="173" height="13" forecolor="#242323" uuid="7e92244a-2d67-4701-9700-395915ee2d4d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

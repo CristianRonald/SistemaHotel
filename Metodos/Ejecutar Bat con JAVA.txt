@@ -1,0 +1,9 @@
+private void reset(){
+     try {
+      Runtime.getRuntime().exec("reset.bat");  
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, e.getMessage());
+    } finally {
+        System.exit(0);
+   }
+  }

@@ -1,0 +1,18 @@
+String nombre_equipo;
+String usuario;
+String procesador;
+String so;
+String jdk;
+nombre_equipo = System.getenv("COMPUTERNAME");
+nome.setText(nombre_equipo);
+usuario = System.getProperty("user.name");
+nomu.setText(usuario);
+procesador = System.getenv("PROCESSOR_IDENTIFIER");
+pro.setText(procesador);
+so = System.getProperty("os.name");
+sistemop.setText(so);
+jdk = System.getProperty("java.version");
+ver_jdk.setText(jdk);
+Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+int sr = Toolkit.getDefaultToolkit().getScreenResolution();
+pant.setText("Tamaño de pantalla: " + d.width + "x" + d.height + ", definición: " + sr + " ppp");

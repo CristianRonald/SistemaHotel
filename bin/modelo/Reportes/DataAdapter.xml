@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>DataAdapter</name><driver>com.mysql.jdbc.Driver</driver><username>lm</username><password>lm</password><savePassword>true</savePassword><url>jdbc:mysql://localhost/BD_HOTEL</url><database></database><serverAddress></serverAddress><classpath>C:\xampp\mysql\mysql-connector-java-5.1.37-bin.jar</classpath></jdbcDataAdapter>

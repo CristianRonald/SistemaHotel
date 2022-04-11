@@ -1,0 +1,9 @@
+				  String ele = textBus.getText().trim();
+				  if (!ele.trim().equals("")) {
+		     	    for (int i = 0; i < tableList.getRowCount(); i++) {
+		     	           if (tableList.getValueAt(i, 2).toString().trim().equals(ele)) {                                           
+		     	        	  tableList.changeSelection(i, 1, false, false);
+		     	                  break;
+		     	           }
+		     	    }
+				  } 
