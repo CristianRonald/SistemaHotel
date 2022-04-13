@@ -40,7 +40,6 @@ public class VentanaLoad extends JFrame implements ChangeListener{
 				// Llamo conexion
 				ConexionDB conexion = new ConexionDB();
 				conexion.gConnection();
-				//JOptionPane.showMessageDialog(null, "conexión realizada con éxito","SOFLE_HOTEL",JOptionPane.INFORMATION_MESSAGE); 
 				try {
 					VentanaLoad frame = new VentanaLoad();
 					frame.setVisible(true);

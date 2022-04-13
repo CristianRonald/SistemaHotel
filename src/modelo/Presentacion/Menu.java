@@ -2195,6 +2195,6 @@ public class Menu implements ActionListener{
 		
 	}
 	//public static void main(String args[]) {
-	//	new Menu();
+		//new Menu();
 	//}
 }

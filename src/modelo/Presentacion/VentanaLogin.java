@@ -99,12 +99,12 @@ public class VentanaLogin implements ActionListener,FocusListener,KeyListener,Pr
     public void opcacityLogin(){
         
     	// PARA LA VENTANA LOIGIN
-		// Determinar si el dispositivo de gráficos compatible con la translucidez.
+		// Determinar si el dispositivo de grï¿½ficos compatible con la translucidez.
         GraphicsEnvironment ge = 
         GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice gd = ge.getDefaultScreenDevice();
 
-        //Si no son compatibles con ventanas translúcidas, salida.
+        //Si no son compatibles con ventanas translï¿½cidas, salida.
         if (!gd.isWindowTranslucencySupported(TRANSLUCENT)) {
         	VentanaLogin logearse = new VentanaLogin() {};
         	logearse.frame.setVisible(true);
@@ -112,13 +112,13 @@ public class VentanaLogin implements ActionListener,FocusListener,KeyListener,Pr
         }
         JFrame.setDefaultLookAndFeelDecorated(true);
 
-        // Crear la interfaz gráfica de usuario en el hilo de despacho de eventos
+        // Crear la interfaz grï¿½fica de usuario en el hilo de despacho de eventos
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
                 // TRANPARENTE SI DESEO ACTIVARLO DSACTIVE EL SKINS  
             	VentanaLogin logearse = new VentanaLogin();
-            	//logearse.frame.setOpacity(0.95f); // Fije la ventana al 55% opaco (45% translúcida).
+            	//logearse.frame.setOpacity(0.95f); // Fije la ventana al 55% opaco (45% translï¿½cida).
             	logearse.frame.setVisible(true);
             }
         });
@@ -283,7 +283,7 @@ public class VentanaLogin implements ActionListener,FocusListener,KeyListener,Pr
 		cbTipo.removeAllItems();
 	}
 	public void actionPerformed(ActionEvent evento) {
-		  if (evento.getSource() == buttonGrabar){// INGRESAR
+		if (evento.getSource() == buttonGrabar){// INGRESAR
 				if (cbTipo.getSelectedItem()==null){
 					JOptionPane.showMessageDialog(null, "Selecione el tipo de usuario",Menu.SOFTLE_HOTEL,JOptionPane.WARNING_MESSAGE);
 					cbTipo.requestFocus();
@@ -311,8 +311,8 @@ public class VentanaLogin implements ActionListener,FocusListener,KeyListener,Pr
 				// LIMPIA VARIABLES PUBLICAS
 				COD_EMP_USER="";NOM_USUARIO="";TIP_USUARIO="";
 				RAZON_SOCIAL_HOTEL="";RUC_HOTEL="";
-				conexion = new ConexionDB();
 				try {
+					conexion = new ConexionDB();
 					Statement statement = conexion.gConnection().createStatement();
 					ResultSet resultSet = statement.executeQuery("SELECT * FROM USUARIO where CuentaUsu='"  + textCuenta.getText() +"'");
 					String CUENTA="",TIPO="",CLAVE="";
@@ -391,7 +391,9 @@ public class VentanaLogin implements ActionListener,FocusListener,KeyListener,Pr
 					}
 				resultSet.close();	
 				statement.close();
-				} catch (Exception e) {}
+				} catch (Exception e) {
+					System.out.println(e);					
+				}
 				conexion.DesconectarDB();
 			  }
 		  if (evento.getSource() == buttonSalir){// SALIR
@@ -554,4 +556,5 @@ public class VentanaLogin implements ActionListener,FocusListener,KeyListener,Pr
 		// TODO Auto-generated method stub
 		
 	}
+	
 	}
