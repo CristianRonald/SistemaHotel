@@ -206,7 +206,7 @@ public class VentanaControlHotel implements ActionListener,FocusListener,KeyList
 		
 		panelPie = new JPanel();
 		panelPie.setBackground(SystemColor.controlHighlight);
-		panelPie.setBounds(0, 544, lengthScrem - 20, 24);
+		panelPie.setBounds(0,  frame.getSize().height -64 , lengthScrem - 20, 24);
 		frame.getContentPane().add(panelPie);
 		panelPie.setLayout(null);
 		
@@ -342,40 +342,40 @@ public class VentanaControlHotel implements ActionListener,FocusListener,KeyList
 			label[i].setVisible(false);
 			label[i].setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 			
-			if (i==15||i==29||i==43||i==57||i==71||i==85||i==99 ||i==113||i==127||i==141||i==155){
+			if (i==21||i==41||i==61||i==81||i==101||i==121||i==141 ||i==161||i==181||i==201||i==221){
 				x=10;
 			}
-			if (i<=14){
+			if (i<=20){
 				label[i].setBounds(x, 47, Width, Height);x=x+67;
 			}
-			if (i>14 && i<=28){
+			if (i>20 && i<=40){
 				label[i].setBounds(x, 87, Width, Height);x=x+67;
 			}
-			if (i>28 && i<=42){
+			if (i>40 && i<=60){
 				label[i].setBounds(x, 127, Width, Height);x=x+67;
 			}
-			if (i>42 && i<=56){
+			if (i>60 && i<=80){
 				label[i].setBounds(x, 167, Width, Height);x=x+67;
 			}
-			if (i>56 && i<=70){
+			if (i>80 && i<=100){
 				label[i].setBounds(x, 207, Width, Height);x=x+67;
 			}
-			if (i>70 && i<=84){
+			if (i>100 && i<=120){
 				label[i].setBounds(x, 247, Width, Height);x=x+67;
 			}
-			if (i>84 && i<=98){
+			if (i>120 && i<=140){
 				label[i].setBounds(x, 287, Width, Height);x=x+67;
 			}
-			if (i>98 && i<=112){
+			if (i>140 && i<=160){
 				label[i].setBounds(x, 327, Width, Height);x=x+67;
 			}
-			if (i>112 && i<=126){
+			if (i>160 && i<=180){
 				label[i].setBounds(x, 367, Width, Height);x=x+67;
 			}
-			if (i>126 && i<=140){
+			if (i>180 && i<=200){
 				label[i].setBounds(x, 407, Width, Height);x=x+67;
 			}
-			if (i>140 && i<=155){
+			if (i>220 && i<=240){
 				label[i].setBounds(x, 447, Width, Height);x=x+67;
 			}
 		}
@@ -551,40 +551,40 @@ public class VentanaControlHotel implements ActionListener,FocusListener,KeyList
 			button[i].setBorder(null);
 			button[i].setBorderPainted(false);
 
-			if (i==15||i==29||i==43||i==57||i==71||i==85||i==99 ||i==113||i==127||i==141||i==155){
+			if (i==21||i==41||i==61||i==81||i==101||i==121||i==141 ||i==161||i==181||i==201||i==221){
 				x=10;
 			}
-			if (i<=14){
+			if (i<=20){
 				button[i].setBounds(x, 22, Width, Height);x=x+67;
 			}
-			if (i>14 && i<=28){
+			if (i>20 && i<=40){
 				button[i].setBounds(x, 62, Width, Height);x=x+67;
 			}
-			if (i>28 && i<=42){
+			if (i>40 && i<=60){
 				button[i].setBounds(x, 102, Width, Height);x=x+67;
 			}
-			if (i>42 && i<=56){
+			if (i>60 && i<=80){
 				button[i].setBounds(x, 142, Width, Height);x=x+67;
 			}
-			if (i>56 && i<=70){
+			if (i>100 && i<=120){
 				button[i].setBounds(x, 182, Width, Height);x=x+67;
 			}
-			if (i>70 && i<=84){
+			if (i>120 && i<=140){
 				button[i].setBounds(x, 222, Width, Height);x=x+67;
 			}
-			if (i>84 && i<=98){
+			if (i>140 && i<=160){
 				button[i].setBounds(x, 262, Width, Height);x=x+67;
 			}
-			if (i>98 && i<=112){
+			if (i>160 && i<=180){
 				button[i].setBounds(x, 302, Width, Height);x=x+67;
 			}
-			if (i>112 && i<=126){
+			if (i>200 && i<=220){
 				button[i].setBounds(x, 342, Width, Height);x=x+67;
 			}
-			if (i>126 && i<=140){
+			if (i>220 && i<=240){
 				button[i].setBounds(x, 382, Width, Height);x=x+67;
 			}
-			if (i>140 && i<=155){
+			if (i>240 && i<=260){
 				button[i].setBounds(x, 422, Width, Height);x=x+67;
 			}
 			
@@ -890,48 +890,7 @@ public class VentanaControlHotel implements ActionListener,FocusListener,KeyList
 				lbli8.setText("TOTAL HABITACIONES: "+ TItem+"");
 				rs.close();
 				statement.close();
-				if (TItem<=84) {// + 40
-					frame.setBounds(100, 100, 992, 402); 
-					panelDto.setBounds(10, 75, 956, 268);
-					panelPie.setBounds(0, 348, 976, 24);
-					centrar();
-				}
-				if (TItem>84 && TItem<=98) {//  + 40
-					frame.setBounds(100, 100, 992, 442); 
-					panelDto.setBounds(10, 75, 956, 308);
-					panelPie.setBounds(0, 388, 976, 24);
-					centrar();
-				}
-				if (TItem>98 && TItem<=112) {// + 40
-					frame.setBounds(100, 100, 992, 482); 
-					panelDto.setBounds(10, 75, 956, 348);
-					panelPie.setBounds(0, 428, 976, 24);
-					centrar();
-				}
-				if (TItem>112 && TItem<=126) {// + 40
-					frame.setBounds(100, 100, 992, 522); 
-					panelDto.setBounds(10, 75, 956, 388);
-					panelPie.setBounds(0, 468, 976, 24);
-					centrar();
-				}
-				if (TItem>126 &&TItem<=140) {// + 40
-					frame.setBounds(100, 100, 992, 562); 
-					panelDto.setBounds(10, 75, 956, 428);
-					panelPie.setBounds(0, 508, 976, 24);
-					centrar();
-				}
-				if (TItem>140 && TItem<=154) {// + 40
-					frame.setBounds(100, 100, 992, 602); 
-					panelDto.setBounds(10, 75, 956, 468);
-					panelPie.setBounds(0, 548, 976, 24);
-					centrar();
-				}
-				if (TItem>140) {// + 40
-					frame.setBounds(100, 100, 992, 602); 
-					panelDto.setBounds(10, 75, 956, 468);
-					panelPie.setBounds(0, 548, 976, 24);
-					centrar();
-				}
+				
 			}
 			
 		} catch (Exception e) {
@@ -997,7 +956,7 @@ public class VentanaControlHotel implements ActionListener,FocusListener,KeyList
 					else if (estado.trim()=="MANTENIMIENTO") {
 						lbli7.setText(""+ totalItem +"   ");
 					}
-					TItem= TItem+ 1;
+					TItem++;
 				}
 				lbli8.setText("TOTAL HABITACIONES: "+ TItem+"");
 				rs.close();

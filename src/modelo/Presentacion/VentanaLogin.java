@@ -1,4 +1,3 @@
-
 package modelo.Presentacion;
 
 import static java.awt.GraphicsDevice.WindowTranslucency.TRANSLUCENT;
